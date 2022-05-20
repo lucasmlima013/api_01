@@ -2,5 +2,6 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
-app.MapGet("/user", () => "Lucas Marinho");
+app.MapPost("/", () => new {Name = "Lucas Marinho", Age = "35"});
+
 app.Run();
