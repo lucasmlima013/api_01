@@ -8,5 +8,10 @@ app.MapGet("/AddHeader", (HttpResponse response) => {
     return "Olá";
     });
 
+app.MapPost("/saveproduct", (Product product) => {
+    return product.Code + " - " + product.Name;
+
+});
+
 
 app.Run();
